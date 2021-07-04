@@ -2,7 +2,7 @@ module.exports = {
   entry: `${__dirname}/src/index.js`,
   output: {
     path: `${__dirname}/build`,
-    publicPath: '/build/',
+    publicPath: '/mynotionwidgets-ghpages/build/',
     filename: 'bundle.js',
   },
 
@@ -14,7 +14,7 @@ module.exports = {
   // and test spa-github-pages redirect in dev
   devServer: {
     historyApiFallback: {
-      rewrites: [{ from: /\//, to: '/404.html' }],
+      rewrites: [{ from: /\/repo-name\/[^?]/, to: '/404.html' }],
     },
   },
 };
